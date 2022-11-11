@@ -1,11 +1,12 @@
 import { getDatabase } from "firebase/database";
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
 import "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyB_H_zk_PyrI8kTIFwSzQUNV30HAYxnTOQ",
   authDomain: "contact-app-c9748.firebaseapp.com",
+  databaseURL:
+    "https://contact-app-c9748-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "contact-app-c9748",
   storageBucket: "contact-app-c9748.appspot.com",
   messagingSenderId: "939905378818",
@@ -15,6 +16,5 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
-const auth = getAuth(app);
 
-export { database, auth, app };
+export { database, app };
